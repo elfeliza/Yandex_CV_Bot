@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import pathlib as p
 from aiogram import Bot, Dispatcher, executor, types
@@ -47,23 +48,23 @@ async def voice_message_handler(message: types.Message):
         await message.answer(
             "Чтобы узнать об увлечениях, проговори в голосовом сообщении одну из команд:\n- Коротко об Элизе\n- Главное увлечение")
     elif text.lower() == "Молодая Элиза".lower():
-        await message.answer_photo(photo=open("school.png", 'rb'),
+        await message.answer_photo(photo=open("img/school.png", 'rb'),
                                    caption="В школе Элиза организовывала разные мероприятия и любила котиков. Иногда она надевала фиолетовые очки, чтобы ботать матан было не так грустно.")
     elif text.lower() == "Старая элиза".lower():
-        await message.answer_photo(photo=open("old.png", 'rb'),
+        await message.answer_photo(photo=open("img/old.png", 'rb'),
                                    caption="Элиза любит ходить в походы, фото в понамке приехало из пещерных городов Крыма. Еще она любит собирать квадрокоптеры и занимается чирлидингом - строит пирамиды из людей!")
     elif text.lower() == "История любви".lower():
-        await message.answer_audio(audio=open("История первой любви.m4a", 'rb'))
+        await message.answer_audio(audio=open("voices/История первой любви.m4a", 'rb'))
     elif text.lower() == "Об алгоритме обработки естественного языка".lower():
-        await message.answer_audio(audio=open("GPT и AI.m4a", 'rb'))
+        await message.answer_audio(audio=open("voices/GPT и AI.m4a", 'rb'))
     elif text.lower() == "О базах данных".lower():
-        await message.answer_audio(audio=open("Об SQL и NoSQL.m4a", 'rb'))
+        await message.answer_audio(audio=open("voices/Об SQL и NoSQL.m4a", 'rb'))
     elif text.lower() == "Немного об Элизе".lower():
         await message.answer(
             "Буду краток. Элиза data scientist, она вышла замуж за Python, но еще шикарно делает презентации и часто общается с Figma. Иногда она моделирует машинные двигатели в SolidWorks и делает квадрокоптеры, но иногда ей хочется стать русалкой.")
     elif text.lower() == "Главное увлечение".lower():
-        await message.answer(
-            "Находить что-то новое. Вечер удался если квантовые вычисления ускорили перемножение матриц, приложение по колонизации Марса придумано и новая поза йоги выучена. По этой причине Элиза за свои 20 лет попробовала примерно *** (очень много). Она обучала роботов компьютерному зрению, чтобы те играли в футбол, сделала свой интернет-магазин арахисовой пасты в 9 классе, прошла 1000 и 1 курс по машинному обучению, чтобы убедиться, что под капотом не магия, а линал, поступила в МФТИ, занялась моделированием пончиков в Blender, нейробиологией и еще много-много чем. На сегодняшний день она работала на позициях проджект менеджера, тестировщика, Python-разработчика и сейчас - инженером данных. ")
+        stroka = "Находить что-то новое. Вечер удался если квантовые вычисления ускорили перемножение матриц, приложение по колонизации Марса придумано и новая поза йоги выучена. По этой причине Элиза за свои 20 лет попробовала примерно *** (очень много). Она обучала роботов компьютерному зрению, чтобы те играли в футбол, сделала свой интернет-магазин арахисовой пасты в 9 классе, прошла 1000 и 1 курс по машинному обучению, чтобы убедиться, что под капотом не магия, а линал, поступила в МФТИ, занялась моделированием пончиков в Blender, нейробиологией и еще много-много чем. На сегодняшний день она работала на позициях проджект менеджера, тестировщика, Python-разработчика и сейчас - инженер данных."
+        await message.answer(stroka)
     else:
         await message.answer(
             "О-о..Прости:( О таком Элиза еще мне не рассказала. Если ты уверен, что такая команда все же есть, пожалуйста, произнеси еще раз как можно четче.")
@@ -85,7 +86,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(commands=['gogit'])
 async def start(message: types.Message):
-    await message.answer("Лови ссылку на репозиторий бота: https://github.com/elfeliza/bot_test/tree/master")
+    await message.answer("Лови ссылку на репозиторий бота: https://github.com/elfeliza/Yandex_CV_Bot/")
 
 
 @dp.callback_query_handler(lambda c: c.data == 'button1_how')
@@ -128,7 +129,7 @@ async def process_callback_button1(callback_query: types.CallbackQuery):
 @dp.callback_query_handler(lambda c: c.data == 'button_photo_1')
 async def process_callback_button_photo_1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_photo(callback_query.from_user.id, photo=open("school.png", 'rb'),
+    await bot.send_photo(callback_query.from_user.id, photo=open("img/school.png", 'rb'),
                          caption="В школе Элиза организовывала разные мероприятия и любила котиков. Иногда она надевала фиолетовые очки, чтобы ботать матан было не так грустно.")
 
 
@@ -136,7 +137,7 @@ async def process_callback_button_photo_1(callback_query: types.CallbackQuery):
 @dp.callback_query_handler(lambda c: c.data == 'button_photo_2')
 async def process_callback_button_photo_2(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_photo(callback_query.from_user.id, photo=open("old.png", 'rb'),
+    await bot.send_photo(callback_query.from_user.id, photo=open("img/old.png", 'rb'),
                          caption="Элиза любит ходить в походы, фото в понамке приехало из пещерных городов Крыма. Еще она любит собирать квадрокоптеры и занимается чирлидингом - строит пирамиды из людей!")
 
 
@@ -189,21 +190,21 @@ async def process_callback_button1(callback_query: types.CallbackQuery):
 @dp.callback_query_handler(lambda c: c.data == 'button_voice_1')
 async def process_callback_button_photo_1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_audio(callback_query.from_user.id, audio=open("Об SQL и NoSQL.m4a", 'rb'))
+    await bot.send_audio(callback_query.from_user.id, audio=open("voices/Об SQL и NoSQL.m4a", 'rb'))
 
 
 # показ школьного фото
 @dp.callback_query_handler(lambda c: c.data == 'button_voice_2')
 async def process_callback_button_photo_2(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_audio(callback_query.from_user.id, audio=open("GPT и AI.m4a", 'rb'))
+    await bot.send_audio(callback_query.from_user.id, audio=open("voices/GPT и AI.m4a", 'rb'))
 
 
 # показ школьного фото
 @dp.callback_query_handler(lambda c: c.data == 'button_voice_3')
 async def process_callback_button_photo_3(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
-    await bot.send_audio(callback_query.from_user.id, audio=open("История первой любви.m4a", 'rb'))
+    await bot.send_audio(callback_query.from_user.id, audio=open("voices/История первой любви.m4a", 'rb'))
 
 
 if __name__ == '__main__':
