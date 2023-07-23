@@ -1,0 +1,65 @@
+2022/05/10 15:13:33 Starting cygwin install, version 2.918
+2022/05/10 15:13:33 User has backup/restore rights
+2022/05/10 15:13:33 User has symlink creation right
+2022/05/10 15:13:33 io_stream_cygfile: fopen(/etc/setup/setup.rc) failed 2 No such file or directory
+2022/05/10 15:13:33 Current Directory: C:\Users\l1838\Downloads
+Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2022/05/10 15:13:56 source: from local dir
+2022/05/10 15:14:04 root: C:\cygwin64 system
+2022/05/10 15:14:37 Selected local directory: D:\Program Files
+2022/05/10 15:14:37 io_stream_cygfile: fopen(/etc/setup/timestamp) failed 2 No such file or directory
+.ini setup_version is (null), our setup_version is 2.918
+2022/05/10 15:14:38 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+Removing empty category Base
+2022/05/10 15:14:38 solving: 0 tasks, update: yes, use test packages: no
+libsolv: solver started
+libsolv: dosplitprovides=0, noupdateprovide=0, noinfarchcheck=0
+libsolv: allowuninstall=0, allowdowngrade=0, allownamechange=1, allowarchchange=0, allowvendorchange=1
+libsolv: promoteepoch=0, forbidselfconflicts=0
+libsolv: obsoleteusesprovides=0, implicitobsoleteusesprovides=0, obsoleteusescolors=0, implicitobsoleteusescolors=0
+libsolv: dontinstallrecommended=0, addalreadyrecommended=0
+libsolv: number of solvables: 4, memory used: 0 K
+libsolv: number of ids: 194 + 3
+libsolv: string memory used: 0 K array + 3 K data,  rel memory used: 0 K array
+libsolv: string hash memory: 32 K, rel hash memory : 16 K
+libsolv: provide ids: 2
+libsolv: provide space needed: 8 + 256
+libsolv: shrunk whatprovidesdata from 8 to 8
+libsolv: shrunk whatprovidesauxdata from 8 to 3
+libsolv: whatprovides memory used: 4 K id array, 1 K data
+libsolv: whatprovidesaux memory used: 0 K id array, 0 K data
+libsolv: WARNING: pool_addfileprovides was not called, this may result in slow operation
+libsolv: lazywhatprovidesq size: 0 entries
+libsolv: createwhatprovides took 0 ms
+libsolv: obsoletes data: 1 entries
+libsolv: added 0 pkg rules for installed solvables
+libsolv: added 0 pkg rules for updaters of installed solvables
+libsolv: added 0 pkg rules for packages involved in a job
+libsolv: added 0 pkg rules because of weak dependencies
+libsolv: 3 of 3 installable solvables considered for solving
+libsolv: pkg rule memory used: 0 K
+libsolv: pkg rule creation took 0 ms
+libsolv: choice rule creation took 0 ms
+libsolv: 0 pkg rules, 2 * 2 update rules, 0 job rules, 0 infarch rules, 0 dup rules, 0 choice rules, 0 best rules
+libsolv: overall rule memory used: 0 K
+libsolv: solving...
+libsolv: resolving job rules
+libsolv: resolving installed packages
+libsolv: deciding orphaned packages
+libsolv: solver statistics: 0 learned rules, 0 unsolvable, 0 minimization steps
+libsolv: done solving.
+libsolv: solver took 0 ms
+libsolv: final solver statistics: 0 problems, 0 learned rules, 0 unsolvable
+libsolv: solver_solve took 0 ms
+libsolv: 
+libsolv: transaction:
+libsolv: 
+libsolv: orphaned packages:
+libsolv:   base-0.0-0.any (kept)
+libsolv:   _windows-10.0.19044.any (kept)
+libsolv: 
+libsolv: ordering transaction
+libsolv: transaction elements: 0
+2022/05/10 15:32:36 mbox : Are you sure you want to exit setup? Any current download or installation will be aborted.
+2022/05/10 15:32:40 mbox : Are you sure you want to exit setup? Any current download or installation will be aborted.
+2022/05/10 15:32:43 Ending cygwin install

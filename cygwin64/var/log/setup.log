@@ -1,0 +1,14 @@
+2022/05/10 15:13:33 Starting cygwin install, version 2.918
+2022/05/10 15:13:33 User has backup/restore rights
+2022/05/10 15:13:33 User has symlink creation right
+2022/05/10 15:13:33 io_stream_cygfile: fopen(/etc/setup/setup.rc) failed 2 No such file or directory
+2022/05/10 15:13:33 Current Directory: C:\Users\l1838\Downloads
+2022/05/10 15:13:56 source: from local dir
+2022/05/10 15:14:04 root: C:\cygwin64 system
+2022/05/10 15:14:37 Selected local directory: D:\Program Files
+2022/05/10 15:14:37 io_stream_cygfile: fopen(/etc/setup/timestamp) failed 2 No such file or directory
+2022/05/10 15:14:38 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+2022/05/10 15:14:38 solving: 0 tasks, update: yes, use test packages: no
+2022/05/10 15:32:36 mbox : Are you sure you want to exit setup? Any current download or installation will be aborted.
+2022/05/10 15:32:40 mbox : Are you sure you want to exit setup? Any current download or installation will be aborted.
+2022/05/10 15:32:43 Ending cygwin install
